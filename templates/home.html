@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block title%} FindBus - Encuentra tu micro {%endblock%}
+{%block content%}
+<main id="page-content">
+    <div class="container">
+        <div class="card-container">
+            <div class="search-card text-center">
+                <div class="card-header">
+                    <i class="fas fa-search"></i> Busca tu Micro
+                </div>
+                <div class="card-body">
+                    <form action="/buscador" method="POST">
+                        <input type="text" name="paradero" class="search-input" placeholder="Ingresa el número de la micro..." required>
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i> Buscar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{%endblock%}

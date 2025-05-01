@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="table-container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Micro</th>
+            <th scope="col">Distancia</th>
+            <th scope="col">Tiempo</th>
+          </tr>
+        </thead>
+        <tbody>
+            {%if respuesta%}
+                {%for datos in respuesta%}
+          <tr>
+            
+            <th scope="row">{{datos.micro}}</th>
+            <td>{{datos.distancia}}mts</td>
+            <td>{{datos.min}} a {{datos.max}} min</td>
+                {%endfor%}
+            {% else %}
+                <tr>
+                  <td colspan="4" class="text-center">No hay Micros que se dirigan al paradero</td>
+                </tr>
+             
+            {%endif%}
+        </tbody>
+      </table>
+</div>
+
+{%endblock%}
